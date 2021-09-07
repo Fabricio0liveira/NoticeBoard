@@ -32,6 +32,12 @@ router.post('/new', body_parser.json(), (req, res) => {
 
 })
 
+router.delete('/all', (req, res) => {
+    posts.deletePost()
+    
+    res.send('Post excluído')
+})
+
 // router.delete('/all', (req, res) => {
 //     res.send('Post excluído')
 // })

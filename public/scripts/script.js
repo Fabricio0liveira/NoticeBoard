@@ -60,3 +60,7 @@ function newPost() {
 
     
 }
+
+function deletePost() {
+    
+}

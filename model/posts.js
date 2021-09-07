@@ -19,11 +19,11 @@ module.exports = {
         this.posts.push({ id: generateId(), title, description })
     },
 
-    // deletePost(id) {
-    //     this.posts.forEach((element) => {
-    //         console.log(element.id)
-    //     })
-    // }
+    deletePost() {
+
+        // Removendo elementos do objeto 'posts' em ordem decrescente.
+        this.posts.shift()
+    }
 
 }
 
