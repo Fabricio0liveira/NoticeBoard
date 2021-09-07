@@ -62,5 +62,18 @@ function newPost() {
 }
 
 function deletePost() {
-    
+    // console.log('Clicou no excluir')   
+    let post = document.getElementById('posts').innerHTML[0] = "";
+
+    const options = {
+        method: "DELETE",
+        headers: new Headers({'content-type': 'application/json'}),
+        body: JSON.stringify(post) 
+    }
+
+    fetch('http://192.168.3.9:3000/api/all', options).then(res => {
+        // console.log(res);
+        updatePosts();
+    })
+
 }
